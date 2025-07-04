@@ -23,16 +23,3 @@ RegisterNetEvent("frisk:checkWeapons", function()
         QBCore.Functions.Notify("No one nearby!", "error")
     end
 end)
-
--- Detect Gunfire
-AddEventHandler("gameEventTriggered", function(event, data)
-    if event == "CEventGunShot" then
-        local playerPed = PlayerPedId()
-        local shooter = data[1]
-
-        if shooter == playerPed then
-            hasFiredWeapon[GetPlayerServerId(PlayerId())] = true
-            TriggerServerEvent("gsr:markAsDirty")
-        end
-    end
-end)
