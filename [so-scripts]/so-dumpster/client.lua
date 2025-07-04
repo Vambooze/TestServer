@@ -35,7 +35,7 @@ RegisterNetEvent('so-dumpster:client:hide', function()
     "m23_2_prop_m32_dumpster_01a",
     "prop_dumpster_02a",
     "p_dumpster_t"
-    }, -- Example dumpster model, you might need to add more
+    } -- Example dumpster model, you might need to add more
     local closestDumpster = nil
     local closestDistance = 1000.0
     
@@ -73,4 +73,5 @@ if closestDumpster ~= nil then
     SetEntityCoords(playerPed, insideDumpsterCoords.x, insideDumpsterCoords.y, insideDumpsterCoords.z, false, false, false, false)
 else
     print("No dumpster found nearby.")
-end)
+end
+)
