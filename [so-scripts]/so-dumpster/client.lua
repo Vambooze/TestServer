@@ -26,14 +26,16 @@ exports['qb-target']:AddTargetModel(models, {
 -- Function to get the closest dumpster to a player
 RegisterNetEvent('so-dumpster:client:hide', function()
     local function getClosestDumpster(playerPed)
-    local dumpsterModels = {"prop_dumpster_01a",
-  "prop_cs_dumpster_01a",
-  "prop_dumpster_4a",
-  "prop_dumpster_3a",
-  "prop_dumpster_4b",
-  "m23_2_prop_m32_dumpster_01a",
-  "prop_dumpster_02a",
-  "p_dumpster_t"} -- Example dumpster model, you might need to add more
+    local dumpsterModels = {
+    "prop_dumpster_01a",
+    "prop_cs_dumpster_01a",
+    "prop_dumpster_4a",
+    "prop_dumpster_3a",
+    "prop_dumpster_4b",
+    "m23_2_prop_m32_dumpster_01a",
+    "prop_dumpster_02a",
+    "p_dumpster_t"
+    }, -- Example dumpster model, you might need to add more
     local closestDumpster = nil
     local closestDistance = 1000.0
     
